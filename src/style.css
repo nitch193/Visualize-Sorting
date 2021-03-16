@@ -1,0 +1,38 @@
+body {
+  position: relative;
+  color: #006cff;
+  background-color: #242121;
+}
+.light {
+  background-color: white;
+}
+p {
+  text-align: left;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+span {
+  text-align: left;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+.toggle {
+  all: unset;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.toggle:hover {
+  transition: 0.8s ease-out;
+  transform: rotate(360deg);
+}
+
+.toggle-light {
+  background-color: #242121;
+}
