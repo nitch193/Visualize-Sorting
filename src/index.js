@@ -1,3 +1,11 @@
-import { app } from "./app/app";
+import { newArray } from "./App/newArray";
+import drawCanvas from "./App/drawCanvas";
+import bubbleSort from "./scripts/bubbleSort";
+import _quickSort from "./scripts/quickSort";
 import "./style.css";
-app();
+const canvas = document.getElementById("my-canvas");
+const { array, state } = newArray(canvas.width, canvas.height);
+drawCanvas(canvas, array);
+console.log(array);
+_quickSort(array, state);
+console.log(array);

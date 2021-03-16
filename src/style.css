@@ -36,3 +36,8 @@ span {
 .toggle-light {
   background-color: #242121;
 }
+
+#my-canvas {
+  border: #006cff thin solid;
+  margin: 0 auto;
+}
