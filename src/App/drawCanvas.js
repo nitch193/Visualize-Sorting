@@ -4,8 +4,8 @@ export default function drawCanvas(canvas, array) {
   ctx.fillStyle = "#1f231f";
   let xStart = 0;
   for (let i = 0; i < array.length; i++) {
-    ctx.fillRect(xStart, canvas.height - array[i], 20, array[i]);
-    ctx.strokeRect(xStart, canvas.height - array[i], 20, array[i]);
-    xStart += 20;
+    ctx.fillRect(xStart, canvas.height - array[i], 10, array[i]);
+    ctx.strokeRect(xStart, canvas.height - array[i], 10, array[i]);
+    xStart += 10;
   }
 }

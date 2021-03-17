@@ -1,17 +1,21 @@
-export default function _quickSort(array, state) {
+import drawWhileSorting from "../App/drawWhileSorting";
+import sleep from "../App/sleep";
+
+export default async function _quickSort(array, state, canvas) {
   let start = 0,
     end = array.length - 1;
-  quickSort(array, state, start, end);
+  await quickSort(array, state, start, end, canvas);
+  await drawWhileSorting(array, state, canvas);
 }
 
-function quickSort(array, state, start, end) {
+async function quickSort(array, state, start, end, canvas) {
   if (start >= end) return;
-  let partitionIndex = partition(array, state, start, end);
-  quickSort(array, state, start, partitionIndex - 1);
-  quickSort(array, state, partitionIndex + 1, end);
+  let partitionIndex = await partition(array, state, start, end, canvas);
+  await quickSort(array, state, start, partitionIndex - 1, canvas);
+  await quickSort(array, state, partitionIndex + 1, end, canvas);
 }
 
-function partition(array, state, start, end) {
+async function partition(array, state, start, end, canvas) {
   let pivot = array[end],
     pivotIndex = start;
   for (let i = start; i < end; i++) {
@@ -20,10 +24,16 @@ function partition(array, state, start, end) {
       array[i] = array[pivotIndex];
       array[pivotIndex] = t;
       pivotIndex++;
+      state[i] = 1;
+      state[pivotIndex] = 1;
+      await sleep(50);
+      await drawWhileSorting(array, state, canvas);
     }
   }
   let t = array[end];
   array[end] = array[pivotIndex];
   array[pivotIndex] = t;
+  await sleep(50);
+  await drawWhileSorting(array, state, canvas);
   return pivotIndex;
 }

@@ -6,6 +6,5 @@ import "./style.css";
 const canvas = document.getElementById("my-canvas");
 const { array, state } = newArray(canvas.width, canvas.height);
 drawCanvas(canvas, array);
-console.log(array);
-_quickSort(array, state);
-console.log(array);
+// bubbleSort(array, state, canvas);
+_quickSort(array, state, canvas);

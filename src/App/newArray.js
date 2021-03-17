@@ -1,10 +1,10 @@
 export const newArray = (width, height) => {
   let array = [];
-  let states = [];
-  for (let i = 0; i < width; i = i + 20) {
+  let state = [];
+  for (let i = 0; i < width; i = i + 10) {
     let value = Math.floor(Math.random(height) * height);
     array.push(value);
-    states.push(-1);
+    state.push(-1);
   }
-  return { array, states };
+  return { array, state };
 };
