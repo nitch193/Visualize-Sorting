@@ -24,7 +24,7 @@ async function partition(array, state, start, end, canvas) {
       array[i] = array[pivotIndex];
       array[pivotIndex] = t;
       pivotIndex++;
-      state[i] = 1;
+      state[i] = 0;
       state[pivotIndex] = 1;
       await sleep(50);
       await drawWhileSorting(array, state, canvas);

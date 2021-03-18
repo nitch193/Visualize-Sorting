@@ -1,7 +1,7 @@
 export default function drawCanvas(canvas, array) {
   let ctx = canvas.getContext("2d");
   ctx.strokeStyle = "#006fce";
-  ctx.fillStyle = "#fff";
+  ctx.fillStyle = "pink";
   let xStart = 0;
   for (let i = 0; i < array.length; i++) {
     ctx.fillRect(xStart, canvas.height - array[i], 10, array[i]);

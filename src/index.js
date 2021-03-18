@@ -2,6 +2,7 @@ import { newArray } from "./App/newArray";
 import drawCanvas from "./App/drawCanvas";
 import bubbleSort from "./scripts/bubbleSort";
 import _quickSort from "./scripts/quickSort";
+import disableOthers, { enableOthers } from "./App/disableAndEnable";
 import "./style.css";
 import _mergeSort from "./scripts/mergeSort";
 const canvas = document.getElementById("my-canvas");
@@ -15,11 +16,21 @@ const start = document.getElementById("start");
 function Init() {
   let { array, state } = newArray(canvas.width, canvas.height);
   drawCanvas(canvas, array);
-  start.addEventListener("click", () => {
+  start.addEventListener("click", async () => {
     let sortingMethod = selected.value;
-    if (sortingMethod === "m") _mergeSort(array, state, canvas);
-    else if (sortingMethod == "q") _quickSort(array, state, canvas);
-    else bubbleSort(array, state, canvas);
+    if (sortingMethod === "m") {
+      disableOthers(start, selected);
+      await _mergeSort(array, state, canvas);
+      enableOthers(start, selected);
+    } else if (sortingMethod == "q") {
+      disableOthers(start, selected);
+      await _quickSort(array, state, canvas);
+      enableOthers(start, selected);
+    } else {
+      disableOthers(start, selected);
+      await bubbleSort(array, state, canvas);
+      enableOthers(start, selected);
+    }
   });
   reset.addEventListener("click", () => {
     window.location.reload();
