@@ -2,6 +2,8 @@ import { newArray } from "./App/newArray";
 import drawCanvas from "./App/drawCanvas";
 import bubbleSort from "./scripts/bubbleSort";
 import _quickSort from "./scripts/quickSort";
+import selectionSort from "./scripts/selectionSort";
+import insertionSort from "./scripts/insertionSort";
 import disableOthers, { enableOthers } from "./App/disableAndEnable";
 import "./style.css";
 import _mergeSort from "./scripts/mergeSort";
@@ -22,13 +24,21 @@ function Init() {
       disableOthers(start, selected);
       await _mergeSort(array, state, canvas);
       enableOthers(start, selected);
-    } else if (sortingMethod == "q") {
+    } else if (sortingMethod === "q") {
       disableOthers(start, selected);
       await _quickSort(array, state, canvas);
       enableOthers(start, selected);
-    } else {
+    } else if (sortingMethod === "b") {
       disableOthers(start, selected);
       await bubbleSort(array, state, canvas);
+      enableOthers(start, selected);
+    } else if (sortingMethod === "i") {
+      disableOthers(start, selected);
+      await insertionSort(array, state, canvas);
+      enableOthers(start, selected);
+    } else {
+      disableOthers(start, selected);
+      await selectionSort(array, state, canvas);
       enableOthers(start, selected);
     }
   });
