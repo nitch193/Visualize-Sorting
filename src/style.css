@@ -1,7 +1,7 @@
 body {
   position: relative;
-  color: #006cff;
-  background-color: #242121;
+  color: #f3f3f3;
+  background-color: #282828;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,12 @@ body {
 }
 
 #my-canvas {
-  outline: #006cff 3px solid;
+  /* -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV"; */
+  border-top: #f3f4ed solid 1px;
   margin: 0 auto;
 }
