@@ -11,13 +11,12 @@ body {
   margin: 15px;
 }
 
+.parent-div {
+  width: 50vw;
+}
+
 #my-canvas {
-  /* -moz-transform: scaleY(-1);
-  -o-transform: scaleY(-1);
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
-  filter: FlipV;
-  -ms-filter: "FlipV"; */
+  width: 100%;
   border-top: #f3f4ed solid 1px;
   margin: 0 auto;
 }
