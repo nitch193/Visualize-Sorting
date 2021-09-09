@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/mokkapps/changelog-generator-demo/compare/v1.0.13...v1.1.0) (2021-09-09)
+
+
+### Features
+
+* Hello Peter ([6729914](https://github.com/mokkapps/changelog-generator-demo/commits/672991402106b79ec5c68c6eb23fc7c87b023c03))
+
 ### [1.0.13](https://github.com/mokkapps/changelog-generator-demo/compare/v1.0.12...v1.0.13) (2021-09-09)
 
 
