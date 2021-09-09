@@ -1,6 +1,6 @@
 {
   "name": "sorting-visualization",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Visualize sorting algorithm",
   "main": "index.js",
   "scripts": {
