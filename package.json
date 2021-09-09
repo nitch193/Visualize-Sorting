@@ -1,6 +1,6 @@
 {
   "name": "sorting-visualization",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Visualize sorting algorithm",
   "main": "index.js",
   "scripts": {
@@ -47,7 +47,9 @@
         "type": "test",
         "hidden": true
       }
-    ]
+    ],
+    "commitUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/commits/{{hash}}",
+    "compareUrlFormat": "https://github.com/mokkapps/changelog-generator-demo/compare/{{previousTag}}...{{currentTag}}"
   },
   "keywords": [],
   "devDependencies": {
