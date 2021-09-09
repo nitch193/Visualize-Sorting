@@ -7,7 +7,7 @@
     "start": "webpack serve  --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
     "release": "standard-version",
-    "test": "echo \"Error: no test specified\" && exit 1 ",
+    "test": "echo \"Error: no test specified\"",
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch",
     "release:major": "standard-version --release-as major",
